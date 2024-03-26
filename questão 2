@@ -1,0 +1,48 @@
+// 2 questão
+#include <stdio.h>
+
+int main() {
+    int a, b, auxiliar, i, n, v[10], x;
+
+    a = 0;
+    b = 1;
+    x = 0;
+    v[0] = a;
+    v[1] = b;
+
+    for(i = 2; i <= 12; i++) {
+
+        auxiliar = a + b;
+        a = b;
+        b = auxiliar;
+
+        v[i] = auxiliar; 
+    }
+
+    printf("\n*****Sequência de Fibonacci*****\n");
+
+    for(i=0; i<10; i++){
+
+        printf("%d\n", v[i]);
+
+    }
+
+    printf("\nDigite o número a ser verificado: ");
+    scanf("%d", &n);
+
+    for(i=0; i<10; i++){
+
+        if(v[i] == n){
+            x = 1;
+        }
+
+    }
+
+    if(x == 1){
+            printf("\nO número %d pertence a Fibonacci\n", n);
+    }else{
+        printf("\nO número %d não pertence a Fibonacci\n", n);
+    }
+
+    return 0;
+}
