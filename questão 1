@@ -1,0 +1,17 @@
+//1 questão
+#include <stdio.h>
+
+int main(void) {
+    int indice = 13;
+    int soma = 0;
+    int k = 0;
+
+    for (k = 0; k <= indice; k++){
+        soma = soma + k; 
+        printf("\n%d", soma);
+    } 
+
+    printf("\n%d", soma);
+
+    return 0;
+}
