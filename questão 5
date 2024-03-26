@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+
+    char invert[] = "String Invertida";
+
+    size_t size = strlen(invert);
+    for(int i = 0; i < size / 2; i++) {
+       char tmp = invert[i]; 
+       invert[i] = invert[size - i - 1]; 
+       invert[size - i - 1] = tmp; 
+    }
+    printf("%s", invert);
+}
